@@ -24,9 +24,9 @@ from account.urls import *
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Snippets API",
+      title="Inventory API",
       default_version='v1',
-      description="Test description",
+      description="Test Api for inventory management",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="contact@snippets.local"),
       license=openapi.License(name="BSD License"),
@@ -37,7 +37,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('admin/', admin.site.urls),
+    path('Inventory-admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('inventory/', include('app.urls')),
 ]
