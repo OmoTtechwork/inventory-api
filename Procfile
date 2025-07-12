@@ -1,1 +1,1 @@
-web: guicorn root.wsgi
+web: guicorn inventory.wsgi
