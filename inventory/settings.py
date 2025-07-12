@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['inventory-api-68n3.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['inventory-mxmf.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
