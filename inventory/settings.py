@@ -125,7 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
@@ -153,6 +152,11 @@ SIMPLE_JWT = {
 
 
 SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'LOGIN_URL': None,
+    'LOGOUT_URL': None,
+    "ALGORITHM": "HS256",
+    "SIGNING_KEY": SECRET_KEY,
     'SECURITY_DEFINITIONS':{
         'Bearer':{
             'type': 'apiKey',
